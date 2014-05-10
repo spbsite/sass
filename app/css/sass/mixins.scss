@@ -1,0 +1,25 @@
+
+@mixin border-radius(@radius){
+	-webkit-border-radius: @radius;
+		 -moz-border-radius: @radius;
+					border-radius: @radius;
+}
+
+@mixin border-box(){
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}  
+}
+// Пример использования
+@include placeholder {
+    font-style:italic;
+    color: white;
+    font-weight:100;
+}
